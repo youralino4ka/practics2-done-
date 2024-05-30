@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аниме на вечер</title>
+    <link rel="stylesheet" href="list.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="scroll" href="list.js">
+</head>
+
+
+<body> 
+  <!-- блок переключения темы -->
+    <div class="theme-switcher">
+      <!-- кнопка для переключения на светлую тему -->
+      <button onclick="switchTheme('light')">Светлая тема</button>
+      <!-- кнопка для переключения на темную тему -->
+      <button onclick="switchTheme('dark')">Темная тема</button>
+  </div>
+  <!-- подключение JS файла -->
+  <script src="list.js">
+  </script>
+  <!-- приветствия и описание опроса -->
+    <section class="one">
+        <h1 class="text1">Добро пожаловать в наш интерактивный опрос, специально разработанный для помощи Вам в выборе идеального аниме сериала, соответствующего Вашему текущему настроению.
+            Просто ответьте на несколько простых вопросов, и наш алгоритм предложит Вам аниме, которое точно удовлетворит Ваши эмоциональные потребности ❤</h1>
+      </section>
+      <!-- выбор настроения -->
+      <section>
+        <h1>1. Какое настроение преобладает у вас сегодня?</h1>
+       <label for="genre-select"></label> 
+       <!-- форма для выбора настроения -->
+       <form id="genreform">
+          <select id="genre">
+              <option value="action">Радость и веселье</option>
+              <option value="comedy">Грусть и раздумья</option>
+              <option value="drama">Усталось и стресс</option>
+              <option value="horror">Неуверенность и тревога</option>
+          </select>
+      </section>
+      <section class="two">
+        <h1>2. Какой жанр аниме Вам больше всего нравится?</h1>
+        <label for="mood-select"></label>
+        <!-- выбора жанра аниме -->
+        <form id="moodform">
+        <select id="mood">
+            <option value="happy">Романтика и драма</option>
+            <option value="sad">Фантастика и Фэнтези</option>
+            <option value="excited">Ужасы и мистика</option>
+            <option value="relaxed">Комедия и юмор</option>
+        </select>
+      </section>
+        <section class="three">
+        <h1>3. Какова Ваша предпочтительная длина сериалов?</h1>
+        <label for="lenght-select"></label>
+         <!-- выбор длины серий -->
+        <form id="lenghtform">
+        <select id="lenght">
+            <option value="short">Короткие серии (10-15 мин)</option>
+            <option value="medium">Средние серии (20-30 мин)</option>
+            <option value="long">Длинные серии (более 30 мин)</option>
+        </select>
+      </section>
+      <section class="four">
+        <h1>4. Какой уровень насилия и драматизма вы готовы принять в аниме?</h1>
+        <label for="drama-select"></label>
+        <!-- выбор уровня насилия и драматизма -->
+        <form id="dramaform">
+            <select id="drama">
+                <option value="min">Минимум или вообще нет</option>
+                <option value="med">Умеренный</option>
+                <option value="big">Высокий</option>
+            </select>
+      </section>
+      <section class="five">
+        <h1>5. Есть ли у вас предпочтения по поводу наличия фансервиса или романтики?</h1>
+        <label for="fan-label"></label>
+        <!-- выбор предпочтений по фансервису или романтике -->
+        <form id="fanform">
+            <select id="fan">
+                <option value="yes">Да, мне это нравится</option>
+                <option value="no">Нет, мне это не нравится</option>
+                <option value="idk">Не имеет значения</option>
+            </select>
+      </section>
+      <!-- раздел для получения рекомендации -->
+      <section class="recommented">
+        <!-- кнопка для отправки формы и получения рекомендации -->
+            <button type="submit">Получить рекомендацию!</button>
+             <!-- контейнер для отображения результата -->
+          <div id="result-container" class="hidden">
+            <p id="anime-recommendation"></p>
+          </div>
+          <!-- подключение JS для обработки рекомендаций -->
+        <script src="recomm.js"></script>
+            </select>
+      </section>
+</body>
+</html>
+
